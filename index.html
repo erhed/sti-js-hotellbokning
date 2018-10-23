@@ -1,0 +1,197 @@
+<!--
+Bygg en hotellbokning och man ska bl a fylla i följande: 
+- Namn, adress, email, telefonnummer 
+- Datum då man anländer och reser igen. 
+- Antal personer 
+- Betalningsinformation, kortnummer 
+- Frukost, Lunch, middag 
+- Val av hyrbil 
+- Typ av rum: enkelt, lyxigt, med balkong osv 
+- osv…
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Boka hotell</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="check.css">
+  <link rel="stylesheet" type="text/css" href="select.css">
+  <link rel="stylesheet" type="text/css" href="slider.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="head">
+      BOKA HOTELL
+    </div>
+
+    <form action="" method="post">
+
+      <div class="grid-container">
+
+        <div>
+          <h2>Personuppgifter</h1>
+        </div>
+        <div></div>
+
+        <div id="br-div"></div>
+        <div id="br-div"></div>
+
+        <div class="input-label-div">Namn</div>
+        <div class="input-div">
+          <input name="Namn" type="text">
+        </div>
+
+        <div class="input-label-div">Adress</div>
+        <div class="input-div">
+          <input name="Adress" type="text">
+        </div>
+
+        <div class="input-label-div">Postnummer</div>
+        <div class="input-div">
+          <input name="Postnummer" type="number">
+        </div>
+
+        <div class="input-label-div">Postort</div>
+        <div class="input-div">
+          <input name="Postort" type="text">
+        </div>
+
+        <div id="br-div"></div>
+        <div id="br-div"></div>
+
+        <div class="input-label-div">Telefonnummer</div>
+        <div class="input-div">
+          <input name="Telefonnummer" type="number">
+        </div>
+
+        <div class="input-label-div">E-Mail</div>
+        <div class="input-div">
+          <input name="E-mail" type="email">
+        </div>
+
+        <div id="br-div"></div>
+        <div id="br-div"></div>
+
+        <div>
+          <h2>Hotell</h1>
+        </div>
+        <div></div>
+
+        <div id="br-div"></div>
+        <div id="br-div"></div>
+
+        <div class="input-label-div">Antal personer</div>
+        <div class="input-div">
+          <div id="demo"></div>
+          <div class="slidecontainer">
+            <input name="Antal personer" type="range" min="1" max="10" value="1" class="slider" id="myRange">
+          </div>
+        </div>
+
+        <div class="input-label-div">Från datum</div>
+        <div class="input-div">
+          <input name="Från datum" type="date">
+        </div>
+
+        <div class="input-label-div">Till datum</div>
+        <div class="input-div">
+          <input name="Till datum" type="date">
+        </div>
+
+        <div class="input-label-div">Typ av rum</div>
+        <div class="input-div">
+          <div class="custom-select" width="100%">
+            <select name="Typ av rum">
+              <option>Välj...</option>
+              <option value="Enkelt">Enkelt</option>
+              <option value="Lyxigt">Lyxigt</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-label-div maltider">Måltider</div>
+        <div class="input-div maltider2">
+          <label class="container">Frukost
+            <input type="checkbox" name="Frukost">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Lunch
+            <input type="checkbox" name="Lunch">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Middag
+            <input type="checkbox" name="Middag">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="input-label-div">Hyrbil</div>
+        <div class="input-div">
+          <div class="custom-select" width="100%">
+            <select name="Hyrbil">
+              <option value="Ingen bil">Ingen bil</option>
+              <option value="Ingen bil">Ingen bil</option>
+              <option value="Volvo">Volvo</option>
+              <option value="Ford">Ford</option>
+              <option value="Ferrari">Ferrari</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="br-div"></div>
+        <div id="br-div"></div>
+
+        <div>
+          <h2>Betalningsinformation</h1>
+        </div>
+        <div></div>
+
+        <div id="br-div"></div>
+        <div id="br-div"></div>
+
+        <div class="input-label-div">Korttyp</div>
+        <div class="input-div">
+          <div class="custom-select" width="100%">
+            <select name="Korttyp">
+              <option>Välj...</option>
+              <option value="VISA">VISA</option>
+              <option value="MasterCard">MasterCard</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-label-div">Kortnummer</div>
+        <div class="input-div">
+          <input name="Kortnummer" type="number">
+        </div>
+
+        <div class="input-label-div">Giltigt t.o.m.</div>
+        <div class="input-div giltigt">
+          <input id="giltigt" name="Giltigt ÅR" type="number" placeholder="År"> /
+          <input id="giltigt" name="Giltigt MÅNAD" type="number" placeholder="Månad">
+        </div>
+
+        <div class="input-label-div">CVC-kod</div>
+        <div class="input-div">
+          <input name="CVC" type="number">
+        </div>
+
+      </div>
+      <div class="submit">
+        <button type="submit" value="Skicka">Skicka</button>
+      </div>
+    </form>
+  </div>
+  <script src="select.js"></script>
+  <script src="slider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(0.4turn,rgb(76, 96, 160),rgb(154, 206, 247));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h2 {
+  color: darkslateblue;
+  font-size: 1.4em;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  font-size: 1em;
+  padding: 8px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.2em;
+  background-image: linear-gradient(rgb(91, 80, 163), rgb(117, 104, 199));
+  color: white;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+.wrapper {
+  background-color: rgb(255, 255, 255);
+  width: 700px;
+  border-left: 1px solid rgb(70, 68, 90);
+  border-right: 1px solid rgb(70, 68, 90);
+  margin: 0 auto;
+  padding: 0 60px 100px 60px;
+  box-shadow: 0px 0px 200px rgba(0,0,0,0.2);
+}
+
+.head {
+  text-align: center;
+  padding: 100px;
+  font-size: 3em;
+  font-weight: bold;
+  color: darkslateblue;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1em;
+  width: 84%;
+  margin: 0 auto;
+}
+
+#br-div {
+  margin-bottom: 50px;
+}
+
+.input-label-div {
+  padding-top: 14px;
+}
+
+.giltigt {
+  color: white;
+}
+
+.maltider {
+  margin-top: 7px;
+}
+
+.maltider2 {
+  margin-top: 19px;
+  margin-bottom: 10px;
+}
+
+#giltigt {
+  display: inline-block;
+  width: 47%;
+}
+
+.submit {
+  margin: 100px auto 20px auto;
+  text-align: center;
+}

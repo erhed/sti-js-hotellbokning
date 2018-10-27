@@ -38,9 +38,3 @@
   background: rgb(102, 76, 175); /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
-
-#demo {
-  text-align: center;
-  padding-top: 5px;
-  font-size: 1.5em;
-}

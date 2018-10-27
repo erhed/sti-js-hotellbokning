@@ -8,6 +8,8 @@ Bygg en hotellbokning och man ska bl a fylla i följande:
 - Val av hyrbil 
 - Typ av rum: enkelt, lyxigt, med balkong osv 
 - osv…
+
+<form action="http://primat.se/services/sendform.aspx?recipient=erik.hedrenius@gmail.com" method="post" id="form">
 -->
 
 <!DOCTYPE html>
@@ -30,7 +32,7 @@ Bygg en hotellbokning och man ska bl a fylla i följande:
       BOKA HOTELL
     </div>
 
-    <form action="" method="post">
+    <form id="form">
 
       <div class="grid-container">
 
@@ -54,7 +56,7 @@ Bygg en hotellbokning och man ska bl a fylla i följande:
 
         <div class="input-label-div">Postnummer</div>
         <div class="input-div">
-          <input name="Postnummer" type="number">
+          <input name="Postnummer" type="number" maxlength="5">
         </div>
 
         <div class="input-label-div">Postort</div>
@@ -88,9 +90,9 @@ Bygg en hotellbokning och man ska bl a fylla i följande:
 
         <div class="input-label-div">Antal personer</div>
         <div class="input-div">
-          <div id="demo"></div>
+          <div id="antalPersoner"></div>
           <div class="slidecontainer">
-            <input name="Antal personer" type="range" min="1" max="10" value="1" class="slider" id="myRange">
+            <input name="Antal personer" type="range" min="1" max="10" value="2" class="slider" id="myRange">
           </div>
         </div>
 
@@ -164,32 +166,38 @@ Bygg en hotellbokning och man ska bl a fylla i följande:
               <option>Välj...</option>
               <option value="VISA">VISA</option>
               <option value="MasterCard">MasterCard</option>
+              <option value="American Express">American Express</option>
             </select>
           </div>
         </div>
 
         <div class="input-label-div">Kortnummer</div>
         <div class="input-div">
-          <input name="Kortnummer" type="number">
+          <input name="Kortnummer" type="number" maxlength="16">
         </div>
 
         <div class="input-label-div">Giltigt t.o.m.</div>
         <div class="input-div giltigt">
-          <input id="giltigt" name="Giltigt ÅR" type="number" placeholder="År"> /
-          <input id="giltigt" name="Giltigt MÅNAD" type="number" placeholder="Månad">
+          <input id="giltigt" name="Giltigt ÅR" type="number" placeholder="År" maxlength="2"> /
+          <input id="giltigt" name="Giltigt MÅNAD" type="number" placeholder="Månad" maxlength="2">
         </div>
 
         <div class="input-label-div">CVC-kod</div>
         <div class="input-div">
-          <input name="CVC" type="number">
+          <input name="CVC" type="number" maxlength="3">
         </div>
 
       </div>
-      <div class="submit">
-        <button type="submit" value="Skicka">Skicka</button>
-      </div>
+      
     </form>
-  </div>
+    <div class="submit">
+      <button onclick="visaData()" value="Visa">Visa</button>
+    </div>
+    <div id="resultat-grid">
+       
+    </div>
+  </div> 
+  <script src="main.js"></script>
   <script src="select.js"></script>
   <script src="slider.js"></script>
 </body>

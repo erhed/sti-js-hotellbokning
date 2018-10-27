@@ -44,7 +44,7 @@ button {
   border-left: 1px solid rgb(70, 68, 90);
   border-right: 1px solid rgb(70, 68, 90);
   margin: 0 auto;
-  padding: 0 60px 100px 60px;
+  padding: 0 60px 8px 60px;
   box-shadow: 0px 0px 200px rgba(0,0,0,0.2);
 }
 
@@ -72,17 +72,23 @@ button {
   padding-top: 14px;
 }
 
+#antalPersoner {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 1.5em;
+}
+
 .giltigt {
   color: white;
 }
 
 .maltider {
-  margin-top: 7px;
+  margin-top: 0px;
 }
 
 .maltider2 {
-  margin-top: 19px;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-bottom: 2px;
 }
 
 #giltigt {
@@ -93,4 +99,37 @@ button {
 .submit {
   margin: 100px auto 20px auto;
   text-align: center;
+}
+
+#resultat-grid {
+  display: grid;
+  grid-template-columns: 200px 180px;
+  grid-gap: 0px;
+  width: 380px;
+  margin: 50px auto 0px auto;
+  /*border-top: 1px solid rgba(0,0,0,0.2);*/
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+
+#resultat {
+  display: inline-block;
+}
+
+#resultat:first-child {
+  margin: 60px 0 0 0;
+}
+
+#input-namn {
+  font-weight: bold;
+  padding: 4px;
+  color: darkslateblue;
+}
+
+#input-data {
+  padding: 4px;
+}
+
+.br-div-2 {
+  margin-top: 30px;
 }
